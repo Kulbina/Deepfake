@@ -2,7 +2,7 @@ import os
 import json 
 import streamlit as st
 import time 
-import joblib
+#import joblib
 import sklearn 
 from sklearn.linear_model import LogisticRegression
 import pickle
@@ -10,9 +10,9 @@ import pickle
 from PIL import Image
 
 
-model = joblib.load('clf.joblib')
+#model = joblib.load('clf.joblib')
 st.title('С кем сходство из голливудских актрис?')
-
+'''
 if "photo" not in st.session_state:
     st.session_state["photo"]="not done"
 
@@ -49,5 +49,5 @@ res_image = resize_image(SIZE, uploaded_photo)
 
 def predict():
     prediction = model.predict(res_image)
-
+'''
 trigger = st.button('Показать', on_click=predict)        
